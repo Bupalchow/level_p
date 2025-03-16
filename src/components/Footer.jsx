@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import logoImage from "../assets/logo.png"; 
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -18,7 +19,9 @@ export default function Footer() {
             className="mb-6 md:mb-0"
           >
             <div className="flex items-center">
-              <span className="text-4xl font-bold" style={{color: "#ff6b35"}}><img src="/logo.png" alt="Level Up" height={48} width={48}/></span>
+              <span className="text-4xl font-bold" style={{color: "#ff6b35"}}>
+                <img src={logoImage} alt="Level Up" height={48} width={48}/>
+              </span>
               <div className="ml-1 text-[12px] leading-tight">
                 <p>LVL UP DESIGN STUDIO</p>
               </div>
@@ -51,7 +54,7 @@ export default function Footer() {
               className="flex items-center justify-center p-2 bg-black text-white rounded-full transition-colors duration-200 no-underline"
             >
               <Linkedin size={18} />
-              <span className="sr-only">LinkedIn</span>
+              <span class="sr-only">LinkedIn</span>
             </Link>
             <Link 
               to="#" 

@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import logoImage from "../assets/logo.png"; 
 
 export default function LoadingScreen() {
   return (
@@ -20,7 +21,7 @@ export default function LoadingScreen() {
         className="flex items-center"
       >
         <span className="text-5xl font-bold" style={{color: "#ff6b35"}}>
-          <img src="/logo.png" alt="Level Up" height={80} width={80}/>
+          <img src={logoImage} alt="Level Up" height={80} width={80}/>
         </span>
         <div className="ml-2 text-[16px] leading-tight">
           <motion.p

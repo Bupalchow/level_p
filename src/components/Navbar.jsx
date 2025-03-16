@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Menu } from "lucide-react";
-
+import logoImage from "../assets/logo.png"; 
 const navItems = [
   { name: "HOME", href: "/" },
   { name: "ABOUT US", href: "/about" },
@@ -62,7 +62,9 @@ export default function Navbar() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="relative h-9 flex items-center"
             >
-              <span className="text-3xl font-bold" style={{color: "#ff6b35"}}><img src="/logo.png" alt="Level Up" height={42} width={42}/></span>
+              <span className="text-3xl font-bold" style={{color: "#ff6b35"}}>
+                <img src={logoImage} alt="Level Up" height={42} width={42}/>
+              </span>
               <div className="ml-1 text-[11px] leading-tight">
                 <p>LVL UP DESIGN STUDIO</p>
               </div>
