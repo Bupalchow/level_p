@@ -18,7 +18,7 @@ export default function Footer() {
             className="mb-6 md:mb-0"
           >
             <div className="flex items-center">
-              <span className="text-4xl font-bold" style={{color: "#ff6b35"}}><img src="../../public/logo.png" alt="Level Up" height={48} width={48}/></span>
+              <span className="text-4xl font-bold" style={{color: "#ff6b35"}}><img src="/logo.png" alt="Level Up" height={48} width={48}/></span>
               <div className="ml-1 text-[12px] leading-tight">
                 <p>LVL UP DESIGN STUDIO</p>
               </div>
