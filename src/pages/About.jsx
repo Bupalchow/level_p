@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export default function AboutUs() {
   // Counter animation for years of experience
   const [count, setCount] = useState(0);
-  const targetCount = 18;
+  const targetCount = 4;
   
   useEffect(() => {
     if (count < targetCount) {

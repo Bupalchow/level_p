@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { motion } from "framer-motion";
-import { Menu } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X } from "lucide-react";
 import logoImage from "../assets/logo.png"; 
+
 const navItems = [
   { name: "HOME", href: "/" },
   { name: "ABOUT US", href: "/about" },
@@ -21,6 +22,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
+  // Handle scroll events and window resize
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -28,6 +30,9 @@ export default function Navbar() {
 
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
+      if (window.innerWidth >= 768) {
+        setIsOpen(false);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -39,7 +44,18 @@ export default function Navbar() {
     };
   }, []);
 
-  // Determine if on mobile based on window width
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
   const isMobile = windowWidth < 768;
 
   return (
@@ -102,55 +118,99 @@ export default function Navbar() {
             </nav>
           </div>
 
+          {/* Mobile Menu Button and Sidebar */}
           <div className={isMobile ? 'block' : 'hidden'}>
             <button
               onClick={() => setIsOpen(true)}
               className="inline-flex items-center justify-center p-2 bg-transparent border-none rounded-md cursor-pointer"
+              aria-label="Open menu"
             >
               <Menu className="h-6 w-6" />
               <span className="sr-only">Toggle menu</span>
             </button>
             
-            {isOpen && (
-              <div className="fixed inset-0 bg-black bg-opacity-50 z-50">
-                <motion.div 
-                  initial={{ x: "100%" }}
-                  animate={{ x: 0 }}
-                  transition={{ type: "spring", damping: 20 }}
-                  className="fixed top-0 right-0 h-full w-[85%] max-w-[320px] bg-white shadow-lg p-6 z-[51]"
-                >
-                  <button 
+            <AnimatePresence>
+              {isOpen && (
+                <>
+                  {/* Backdrop overlay */}
+                  <motion.div 
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                    className="fixed inset-0 bg-black bg-opacity-50 z-50"
                     onClick={() => setIsOpen(false)}
-                    className="absolute top-6 right-6 w-8 h-8 flex items-center justify-center text-gray-500 bg-transparent border-none text-xl cursor-pointer"
-                  >
-                    ✕
-                  </button>
+                  />
                   
-                  <div className="mt-12">
-                    <nav className="flex flex-col gap-5">
-                      {navItems.map((item, index) => (
-                        <motion.div
-                          key={item.name}
-                          initial={{ opacity: 0, x: 20 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ duration: 0.3, delay: index * 0.05 }}
-                        >
-                          <Link
-                            to={item.href}
-                            onClick={() => setIsOpen(false)}
-                            className={`block py-2 text-lg font-medium no-underline ${
-                              pathname === item.href ? "text-[#ff6b35]" : "text-gray-900"
-                            }`}
+                  {/* Sidebar panel */}
+                  <motion.div 
+                    initial={{ x: "100%" }}
+                    animate={{ x: 0 }}
+                    exit={{ x: "100%" }}
+                    transition={{ 
+                      type: "tween", 
+                      duration: 0.3,
+                      ease: "easeOut"
+                    }}
+                    className="fixed top-0 right-0 h-full w-[85%] max-w-[320px] bg-white shadow-lg p-6 z-[51] overflow-y-auto"
+                  >
+                    <div className="flex justify-between items-center mb-6">
+                      <div className="flex items-center">
+                        <span className="text-xl font-bold" style={{color: "#ff6b35"}}>
+                          <img src={logoImage} alt="Level Up" height={32} width={32}/>
+                        </span>
+                        <div className="ml-2 text-[10px] leading-tight">
+                          <p>LVL UP DESIGN STUDIO</p>
+                        </div>
+                      </div>
+                      
+                      <button 
+                        onClick={() => setIsOpen(false)}
+                        className="flex items-center justify-center w-8 h-8 text-gray-500 hover:text-gray-700 focus:outline-none"
+                        aria-label="Close menu"
+                      >
+                        <X className="h-6 w-6" />
+                      </button>
+                    </div>
+                    
+                    <div className="mt-6">
+                      <nav className="flex flex-col">
+                        {navItems.map((item, index) => (
+                          <motion.div
+                            key={item.name}
+                            initial={{ opacity: 0, x: 20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.3, delay: index * 0.05 }}
+                            className="border-b border-gray-100 last:border-b-0"
                           >
-                            {item.name}
-                          </Link>
-                        </motion.div>
-                      ))}
-                    </nav>
-                  </div>
-                </motion.div>
-              </div>
-            )}
+                            <Link
+                              to={item.href}
+                              onClick={() => setIsOpen(false)}
+                              className={`block py-3.5 text-lg font-medium no-underline transition-colors ${
+                                pathname === item.href ? "text-[#ff6b35]" : "text-gray-900"
+                              }`}
+                            >
+                              {item.name}
+                            </Link>
+                          </motion.div>
+                        ))}
+                      </nav>
+                      
+                      {/* Social links or other content can be added here */}
+                      <div className="mt-8 pt-4 border-t border-gray-100">
+                        <Link 
+                          to="/contact" 
+                          onClick={() => setIsOpen(false)}
+                          className="block w-full py-3 px-4 bg-[#ff6b35] text-white text-center rounded-md font-medium no-underline"
+                        >
+                          Contact Us
+                        </Link>
+                      </div>
+                    </div>
+                  </motion.div>
+                </>
+              )}
+            </AnimatePresence>
           </div>
         </div>
       </div>
