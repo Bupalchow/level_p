@@ -8,11 +8,11 @@ const navItems = [
   { name: "HOME", href: "/" },
   { name: "ABOUT US", href: "/about" },
   { name: "PROJECTS", href: "/projects" },
-  { name: "NEWS", href: "/news" },
-  { name: "CAREERS", href: "/careers" },
-  { name: "FAQ", href: "/faq" },
+  { name: "NEWS", href: "#" },
+  { name: "CAREERS", href: "#" },
+  { name: "FAQ", href: "#" },
   { name: "CONTACT", href: "/contact" },
-  { name: "BLOGS", href: "/blogs" },
+  { name: "BLOGS", href: "#" },
 ];
 
 export default function Navbar() {

@@ -35,34 +35,42 @@ export default function Footer() {
             viewport={{ once: true }}
             className="flex gap-4"
           >
-            <Link 
+            <motion.Link 
               to="#" 
-              className="flex items-center justify-center p-2 bg-black text-white rounded-full transition-colors duration-200 no-underline"
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+              className="flex items-center justify-center p-1.5 text-gray-700 hover:text-[#ff6b35] transition-colors duration-200"
+              aria-label="Facebook"
             >
-              <Facebook size={18} />
-              <span className="sr-only">Facebook</span>
-            </Link>
-            <Link 
+              <Facebook size={16} />
+            </motion.Link>
+            <motion.Link 
               to="#" 
-              className="flex items-center justify-center p-2 bg-black text-white rounded-full transition-colors duration-200 no-underline"
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+              className="flex items-center justify-center p-1.5 text-gray-700 hover:text-[#ff6b35] transition-colors duration-200"
+              aria-label="Twitter"
             >
-              <Twitter size={18} />
-              <span className="sr-only">Twitter</span>
-            </Link>
-            <Link 
+              <Twitter size={16} />
+            </motion.Link>
+            <motion.Link 
               to="#" 
-              className="flex items-center justify-center p-2 bg-black text-white rounded-full transition-colors duration-200 no-underline"
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+              className="flex items-center justify-center p-1.5 text-gray-700 hover:text-[#ff6b35] transition-colors duration-200"
+              aria-label="LinkedIn"
             >
-              <Linkedin size={18} />
-              <span class="sr-only">LinkedIn</span>
-            </Link>
-            <Link 
+              <Linkedin size={16} />
+            </motion.Link>
+            <motion.Link 
               to="#" 
-              className="flex items-center justify-center p-2 bg-black text-white rounded-full transition-colors duration-200 no-underline"
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+              className="flex items-center justify-center p-1.5 text-gray-700 hover:text-[#ff6b35] transition-colors duration-200"
+              aria-label="Instagram"
             >
-              <Instagram size={18} />
-              <span className="sr-only">Instagram</span>
-            </Link>
+              <Instagram size={16} />
+            </motion.Link>
           </motion.div>
         </div>
 
