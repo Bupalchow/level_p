@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
-import logoImage from "../assets/logo.png"; 
+import { Facebook, Linkedin, Instagram } from "lucide-react";
+import logoImage from "../assets/logo.png";
+import PinterestIcon from "./PinterestIcon"; 
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -47,15 +48,15 @@ export default function Footer() {
               <Facebook size={16} />
             </motion.a>
             <motion.a 
-              href="#" 
-              // target="_blank"
+              href="https://pin.it/7hWID0uUJ" 
+              target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
               className="flex items-center justify-center p-1.5 text-gray-700 hover:text-[#ff6b35] transition-colors duration-200"
-              aria-label="Twitter"
+              aria-label="Pinterest"
             >
-              <Twitter size={16} />
+               <PinterestIcon size={16} />
             </motion.a>
             <motion.a 
               href="#" 

@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Facebook, Linkedin, Instagram } from "lucide-react";
+import PinterestIcon from "./PinterestIcon";
 
 export default function SimpleFooter() {
   return (
@@ -29,7 +30,7 @@ export default function SimpleFooter() {
           className="flex items-center justify-center p-1.5 text-gray-700 hover:text-[#ff6b35] transition-colors duration-200"
           aria-label="Pinterest"
         >
-          <Twitter size={16} />
+          <PinterestIcon size={16} />
         </motion.a>
         <motion.a 
           href="#" 
