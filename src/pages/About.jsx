@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 export default function AboutUs() {
-  // Counter animation for years of experience
   const [count, setCount] = useState(0);
   const targetCount = 4;
   
@@ -60,10 +59,7 @@ export default function AboutUs() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
               >
-                LEAD was founded in 2010 by Architects M.Shone Saju and Mr.Dinesh Shanmugam. We are a multi-disciplinary,
-                award-winning architectural firm, specializing in architecture and interior design services. Since our
-                inception, we have worked on a diverse range of projects in residential, commercial, hospitality and
-                institutional works, with a particular focus on specializing in luxury homes.
+                At Lvl Up Design Studio, we believe every space has a story—and we’re here to help you tell yours. Founded and led by Ar. M Kalaiarasan and Ar. Hitha C, we are a team of young, passionate architects committed to designing spaces that go beyond the ordinary.
               </motion.p>
               
               <motion.p 
@@ -72,9 +68,7 @@ export default function AboutUs() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
               >
-                Each project is led by one of our principals, either Shone or Dinesh, giving you the advantage of decades
-                of architectural experience. Their leadership, combined with the talents of our design team, enables LEAD
-                to produce creative architectural designs that meet client expectations.
+                Our mission is to create architecture that adapts to your lifestyle, reflects your vision, and balances aesthetics with purpose. Whether it's a home, a workspace, or a dream project, we design with intention—bringing together sustainability, functionality, and a clean, thoughtful design approach.
               </motion.p>
               
               <motion.p 
@@ -83,26 +77,11 @@ export default function AboutUs() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
               >
-                When we combine your good ideas and our expertise – great things happen. Give us your goals, timeline, and
-                budget and we'll work with you every step of the way to create a tailored design solution.
-              </motion.p>
-              
-              <motion.p 
-                className="text-gray-800"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.7 }}
-              >
-                LEAD believes that quality is in the details. That's why our building designs include sharp, aesthetically
-                pleasing plans that are also practical to build. This attention to detail is reflected in the drawings
-                themselves, which are meticulously created with a high level of precision and accuracy. Contractors
-                appreciate our detailed drawings because they allow jobs to flow smoothly – with fewer on-site challenges
-                and changes. Clients, too, appreciate our expertise – knowing that quality drawings result in projects
-                that are completed on time and on budget.
-              </motion.p>
+                Every detail matters to us, because we know the little things are what make a space truly feel like yours. At Lvl Up, we don’t just build structures—we craft meaningful experiences. Let’s level up your space, and bring your story to life.
+                </motion.p>
             </div>
             
-            <motion.div 
+            {/* <motion.div 
               className="mt-4"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -114,7 +93,7 @@ export default function AboutUs() {
                 alt="LEAD Architecture Team"
                 className="w-full rounded-lg shadow-md"
               />
-            </motion.div>
+            </motion.div> */}
           </motion.div>
         </div>
         

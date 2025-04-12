@@ -35,42 +35,50 @@ export default function Footer() {
             viewport={{ once: true }}
             className="flex gap-4"
           >
-            <motion.Link 
-              to="#" 
+            <motion.a 
+              href="https://www.facebook.com/profile.php?id=61574831676725" 
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
               className="flex items-center justify-center p-1.5 text-gray-700 hover:text-[#ff6b35] transition-colors duration-200"
               aria-label="Facebook"
             >
               <Facebook size={16} />
-            </motion.Link>
-            <motion.Link 
-              to="#" 
+            </motion.a>
+            <motion.a 
+              href="#" 
+              // target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
               className="flex items-center justify-center p-1.5 text-gray-700 hover:text-[#ff6b35] transition-colors duration-200"
               aria-label="Twitter"
             >
               <Twitter size={16} />
-            </motion.Link>
-            <motion.Link 
-              to="#" 
+            </motion.a>
+            <motion.a 
+              href="#" 
+              // target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
               className="flex items-center justify-center p-1.5 text-gray-700 hover:text-[#ff6b35] transition-colors duration-200"
               aria-label="LinkedIn"
             >
               <Linkedin size={16} />
-            </motion.Link>
-            <motion.Link 
-              to="#" 
+            </motion.a>
+            <motion.a 
+              href="https://www.instagram.com/lvlup_designstudio?igsh=cjdxOHlmczR2c29t&utm_source=qr" 
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
               className="flex items-center justify-center p-1.5 text-gray-700 hover:text-[#ff6b35] transition-colors duration-200"
               aria-label="Instagram"
             >
               <Instagram size={16} />
-            </motion.Link>
+            </motion.a>
           </motion.div>
         </div>
 
