@@ -63,9 +63,9 @@ export default function Contact() {
             </p>
           </motion.div>
 
-          <div className="flex flex-wrap -mx-4">
+          <div className="flex flex-wrap -mx-4 justify-center">
             {/* Map */}
-            <motion.div 
+            {/* <motion.div 
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -83,7 +83,7 @@ export default function Contact() {
                   src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Lvl+Up+Design+Studio,5M,East+of+NGEF+Layout,Kasturi+Nagar,Bengaluru,Karnataka+560016,India"
                 ></iframe>
               </div>
-            </motion.div>
+            </motion.div> */}
             
             {/* Contact Form */}
             <motion.div 
