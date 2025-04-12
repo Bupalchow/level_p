@@ -32,27 +32,27 @@ export default function AboutUs() {
       </motion.div>
       
       <div className="pb-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="flex flex-col md:flex-row gap-8">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="h-full"
+            className="md:w-1/2"
           >
             <img
-              src="https://lead.co.in/assets/images/about/aboutus.jpg"
+              src="/Devaraj.jpg"
               alt="LEAD Architecture Building"
               className="w-full h-full object-cover rounded-lg shadow-md"
             />
           </motion.div>
           
           <motion.div 
-            className="flex flex-col h-full"
+            className="md:w-1/2"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
           >
-            <div className="space-y-4 text-sm md:text-base flex-grow">
+            <div className="space-y-6 text-sm md:text-base">
               <motion.p 
                 className="text-gray-800"
                 initial={{ opacity: 0 }}
@@ -78,22 +78,17 @@ export default function AboutUs() {
                 transition={{ duration: 0.5, delay: 0.6 }}
               >
                 Every detail matters to us, because we know the little things are what make a space truly feel like yours. At Lvl Up, we don’t just build structures—we craft meaningful experiences. Let’s level up your space, and bring your story to life.
-                </motion.p>
+              </motion.p>
+              
+              <motion.p 
+                className="text-gray-800"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.7 }}
+              >
+                Our team combines creative vision with technical expertise to deliver designs that are both beautiful and practical. From initial concept to final execution, we collaborate closely with our clients to ensure every project reflects their unique identity and requirements.
+              </motion.p>
             </div>
-            
-            {/* <motion.div 
-              className="mt-4"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7 }}
-              viewport={{ once: true }}
-            >
-              <img
-                src="https://lead.co.in/assets/images/about/Profilephoto1.jpg"
-                alt="LEAD Architecture Team"
-                className="w-full rounded-lg shadow-md"
-              />
-            </motion.div> */}
           </motion.div>
         </div>
         

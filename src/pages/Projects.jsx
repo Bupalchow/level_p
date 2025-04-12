@@ -1,87 +1,43 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const categories = [
-  { id: "all", name: "All Projects" },
-  { id: "residential", name: "Residential" },
-  { id: "commercial", name: "Commercial" },
-  { id: "institutional", name: "Institutional" },
-  { id: "interior", name: "Interior Design" }
-];
+// const categories = [
+//   { id: "all", name: "All Projects" },
+//   { id: "residential", name: "Residential" },
+//   { id: "commercial", name: "Commercial" },
+//   { id: "institutional", name: "Institutional" },
+//   { id: "interior", name: "Interior Design" }
+// ];
 
 const projectsData = [
   {
     id: 1,
     title: "Devraj Farm House",
-    category: "residential",
     description: "Contemporary family home with sustainable features",
-    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.2&auto=format&fit=crop&w=1350&q=80",
+    image: "/Devaraj.jpg",
     location: "Bangalore, India"
   },
   {
     id: 2,
-    title: "Farm House",
-    category: "commercial",
-    description: "Corporate headquarters with open-plan design",
-    image: "https://images.unsplash.com/photo-1554995207-c18c203602cb?ixlib=rb-4.0.2&auto=format&fit=crop&w=1350&q=80",
-    location: "Mumbai, India"
+    title: "Dr. Ravi Farm House",
+    description: "Luxurious countryside retreat with modern amenities",
+    image: "/RaviFarmHouse.jpg",
+    location: "Bangalore, India"
   },
   {
     id: 3,
-    title: "University Campus",
-    category: "institutional",
-    description: "Educational facility with innovative learning spaces",
-    image: "https://images.unsplash.com/photo-1565034946487-077786996e27?ixlib=rb-4.0.2&auto=format&fit=crop&w=1350&q=80",
-    location: "Delhi, India"
+    title: "Kamal Residence",
+    description: "High-end interior design for urban living",
+    image: "/KamalResidence.jpg",
+    location: "Bangalore, India"
   },
   {
     id: 4,
-    title: "Luxury Apartment",
-    category: "interior",
-    description: "High-end interior design for urban living",
-    image: "https://images.unsplash.com/photo-1554995207-c18c203602cb?ixlib=rb-4.0.2&auto=format&fit=crop&w=1350&q=80",
-    location: "Chennai, India"
+    title: "Whitefield Residence",
+    description: "Elegant residential space blending tradition with modernity",
+    image: "/WhiteField.jpg",
+    location: "Bangalore, India"
   },
-  {
-    id: 5,
-    title: "Beach Villa",
-    category: "residential",
-    description: "Oceanfront property with panoramic views",
-    image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-4.0.2&auto=format&fit=crop&w=1350&q=80",
-    location: "Goa, India"
-  },
-  {
-    id: 6,
-    title: "Shopping Mall",
-    category: "commercial",
-    description: "Retail space designed for optimal customer flow",
-    image: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-4.0.2&auto=format&fit=crop&w=1350&q=80",
-    location: "Hyderabad, India"
-  },
-  {
-    id: 7,
-    title: "School Building",
-    category: "institutional",
-    description: "Modern educational facility with outdoor learning areas",
-    image: "https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?ixlib=rb-4.0.2&auto=format&fit=crop&w=1350&q=80",
-    location: "Pune, India"
-  },
-  {
-    id: 8,
-    title: "Restaurant Design",
-    category: "interior",
-    description: "Contemporary dining experience with themed zones",
-    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.2&auto=format&fit=crop&w=1350&q=80",
-    location: "Kolkata, India"
-  },
-  {
-    id: 9,
-    title: "Hillside Retreat",
-    category: "residential",
-    description: "Mountain home with sustainable architecture",
-    image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.2&auto=format&fit=crop&w=1350&q=80",
-    location: "Shimla, India"
-  }
 ];
 
 const PortfolioGrid = () => {
@@ -136,7 +92,7 @@ const PortfolioGrid = () => {
           </motion.div>
 
           {/* Category Filter */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -160,7 +116,7 @@ const PortfolioGrid = () => {
                 {category.name}
               </motion.button>
             ))}
-          </motion.div>
+          </motion.div> */}
 
           {/* Projects Grid */}
           <div className="relative min-h-[400px]">
@@ -218,11 +174,11 @@ const PortfolioGrid = () => {
                           <div className="p-6">
                             <h3 className="text-xl font-bold mb-2">{project.title}</h3>
                             <p className="text-gray-600 mb-4">{project.description}</p>
-                            <div className="flex items-center justify-between">
+                            {/* <div className="flex items-center justify-between">
                               <span className="inline-block px-3 py-1 text-xs font-medium bg-[#ff6b35]/10 text-[#ff6b35] rounded-full">
                                 {project.category.charAt(0).toUpperCase() + project.category.slice(1)}
                               </span>
-                            </div>
+                            </div> */}
                           </div>
                         </div>
                       </motion.div>
