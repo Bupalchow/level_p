@@ -264,14 +264,6 @@ const PortfolioGrid = () => {
               >
                 Contact Us
               </motion.a>
-              <motion.a
-                href="/about"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-3 bg-white border border-[#ff6b35] text-[#ff6b35] rounded-md font-medium hover:bg-gray-50 transition-colors duration-300"
-              >
-                Learn About Us
-              </motion.a>
             </motion.div>
           </div>
         </div>

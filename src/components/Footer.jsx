@@ -101,12 +101,6 @@ export default function Footer() {
             viewport={{ once: true }}
             className="flex flex-wrap justify-center gap-4 text-sm"
           >
-            <Link to="/privacy-policy" className="text-[#6b7280] transition-colors duration-200 no-underline">
-              Privacy Policy
-            </Link>
-            <Link to="/terms" className="text-[#6b7280] transition-colors duration-200 no-underline">
-              Terms of Service
-            </Link>
             <Link to="/contact" className="text-[#6b7280] transition-colors duration-200 no-underline">
               Contact Us
             </Link>

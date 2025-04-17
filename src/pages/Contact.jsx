@@ -265,7 +265,7 @@ export default function Contact() {
               </div>
               <h3 className="font-semibold text-lg mb-3">Phone</h3>
               <p className="text-gray-600">
-              +91 7019792269
+              +91 7019792265
               </p>
             </motion.div>
             
