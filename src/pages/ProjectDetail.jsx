@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, Calendar, Tag, CheckCircle, MapPin } from "lucide-react";
 import DynamicPhotoGrid from "../components/DynamicPhotoGrid";
+import InlineLoading from "../components/InlineLoading";
 
 // Project data with additional stock images for each project
 const projectsData = [
@@ -135,9 +136,7 @@ const ProjectDetail = () => {
     <div className="bg-white min-h-screen">
       <div className="container mx-auto px-4 md:px-6 py-12">
         {loading ? (
-          <div className="flex justify-center items-center py-20">
-            <div className="w-12 h-12 border-4 border-gray-200 border-t-[#ff6b35] rounded-full animate-spin"></div>
-          </div>
+          <InlineLoading />
         ) : (
           <>
             {/* Back to Projects Link */}
