@@ -6,6 +6,7 @@ import SimpleFooter from './components/SimpleFooter';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import PortfolioGrid from './pages/Projects';
+import ProjectDetail from './pages/ProjectDetail';
 import About from './pages/About';
 import LoadingScreen from './components/LoadingScreen';
 import WhatsAppFloat from './components/WhatsAppFloat';
@@ -42,6 +43,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/projects" element={<PortfolioGrid />} />
+            <Route path="/projects/:id" element={<ProjectDetail />} />
           </Routes>
         </main>
         {isHomePage ? <SimpleFooter /> : <Footer />}
